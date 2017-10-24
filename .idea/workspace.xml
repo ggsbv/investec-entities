@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce79cd1b-0c4b-4cef-b092-f5cb7274d62a" name="Default" comment="" />
+    <list default="true" id="ce79cd1b-0c4b-4cef-b092-f5cb7274d62a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test.ts" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/EntityDatabase.js" afterPath="$PROJECT_DIR$/src/database/EntityDatabase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/EntityDatabase.ts" afterPath="$PROJECT_DIR$/src/database/EntityDatabase.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/api/main.js" afterPath="$PROJECT_DIR$/src/database/api/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/api/main.ts" afterPath="$PROJECT_DIR$/src/database/api/main.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/entities/ChildEntity.js" afterPath="$PROJECT_DIR$/src/database/entities/ChildEntity.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/entities/ChildEntity.ts" afterPath="$PROJECT_DIR$/src/database/entities/ChildEntity.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/entities/Limits.js" afterPath="$PROJECT_DIR$/src/database/entities/Limits.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/entities/Limits.ts" afterPath="$PROJECT_DIR$/src/database/entities/Limits.ts" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EntityDatabase.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/database/EntityDatabase.ts">
+      <file leaf-file-name="QueryBuilder.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/database/api/QueryBuilder.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1595">
-              <caret line="60" column="35" lean-forward="false" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+            <state relative-caret-position="174">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -42,6 +54,9 @@
       <find>lib</find>
       <find>console</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -65,10 +80,11 @@
         <option value="$PROJECT_DIR$/src/database/config.ts" />
         <option value="$PROJECT_DIR$/src/populateDatabase.ts" />
         <option value="$PROJECT_DIR$/src/ExcelToJson.ts" />
-        <option value="$PROJECT_DIR$/src/database/entities/ChildEntity.ts" />
         <option value="$PROJECT_DIR$/src/database/api/main.ts" />
         <option value="$PROJECT_DIR$/src/database/entities/Limits.ts" />
+        <option value="$PROJECT_DIR$/src/database/entities/ChildEntity.ts" />
         <option value="$PROJECT_DIR$/src/database/EntityDatabase.ts" />
+        <option value="$PROJECT_DIR$/src/database/EntityService.ts" />
       </list>
     </option>
   </component>
@@ -92,11 +108,12 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <flattenPackages />
@@ -175,15 +192,21 @@
       <workItem from="1508314158381" duration="829000" />
       <workItem from="1508327607970" duration="871000" />
       <workItem from="1508400450512" duration="311000" />
-      <workItem from="1508400778222" duration="11373000" />
+      <workItem from="1508400778222" duration="13346000" />
+      <workItem from="1508744837090" duration="232000" />
+      <workItem from="1508759450908" duration="4267000" />
+      <workItem from="1508774206243" duration="80000" />
+      <workItem from="1508774824894" duration="1147000" />
+      <workItem from="1508783079007" duration="2318000" />
+      <workItem from="1508831143664" duration="4106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75467000" />
+    <option name="totallyTimeSpent" value="89590000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -191,12 +214,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -222,7 +245,7 @@
         <option value="$PROJECT_DIR$/src/database/entities/Limits.js" />
         <option value="$PROJECT_DIR$/../investec-entity-relationships-frontend-final/src/app/limit.js.map" />
         <option value="$PROJECT_DIR$/../investec-entity-relationships-frontend-final/src/app/limit.js" />
-        <option value="$PROJECT_DIR$/src/test.js" />
+        <option value="$PROJECT_DIR$/src/database/EntityService.js" />
       </list>
     </option>
   </component>
@@ -238,9 +261,86 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/database/EntityDatabase.ts">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1334">
+          <caret line="46" column="59" lean-forward="false" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
+          <folding>
+            <marker date="1508837660000" expanded="true" signature="7:134" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="164:199" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="229:1107" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="304:349" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="400:1105" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="596:1042" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="766:1028" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/EntityDatabase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1508837660000" expanded="true" signature="7:134" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="164:199" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="229:1107" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="304:349" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="400:1105" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="596:1042" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="766:1028" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/EntityDatabase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="928">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <marker date="1508837660000" expanded="true" signature="7:134" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="164:199" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="229:1107" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="304:349" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="400:1105" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="596:1042" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="766:1028" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/EntityDatabase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1073">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <marker date="1508837660000" expanded="true" signature="7:134" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="164:199" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="229:1107" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="304:349" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="400:1105" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="596:1042" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="766:1028" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/api/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/api/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/EntityDatabase.ts">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -248,7 +348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="31" column="58" lean-forward="true" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -428,13 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/api/QueryBuilder.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/database/api/cors.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -477,10 +569,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/entities/Limits.ts">
+    <entry file="file://$PROJECT_DIR$/src/database/config.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        <state relative-caret-position="348">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/api/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -494,15 +593,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/config.ts">
+    <entry file="file://$PROJECT_DIR$/src/database/entities/Limits.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <marker date="1507719442000" expanded="false" signature="7:238" ph="..." />
-            <marker date="1507719442000" expanded="true" signature="278:516" ph="{&quot;type&quot;: &quot;mysql&quot;...}" />
-            <marker date="1507719442000" expanded="true" signature="427:491" ph="[...]" />
-          </folding>
+        <state relative-caret-position="-155">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/entities/ChildEntity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -510,42 +611,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <marker date="1507018289000" expanded="false" signature="7:128" ph="..." />
-            <marker date="1507018289000" expanded="true" signature="166:428" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/entities/ChildEntity.ts">
+    <entry file="file://$PROJECT_DIR$/src/database/EntityService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="174">
+          <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
           <folding>
-            <marker date="1507738489000" expanded="false" signature="7:175" ph="..." />
-            <marker date="1507738489000" expanded="true" signature="212:677" ph="{...}" />
-            <marker date="1507738489000" expanded="true" signature="421:572" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/api/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-          <folding>
-            <marker date="1507739284000" expanded="false" signature="7:344" ph="..." />
-            <marker date="1507739284000" expanded="true" signature="483:621" ph="{...}" />
-            <marker date="1507739284000" expanded="true" signature="682:882" ph="{...}" />
-            <marker date="1507739284000" expanded="true" signature="942:1135" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="7:152" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="203:2925" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="301:1495" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="358:1489" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="442:1479" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="1584:2051" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="1692:1766" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="1798:2009" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="2213:2850" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="2319:2386" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="2452:2815" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="2864:2923" ph="{&quot;getParentEntity&quot;: getParentEntity...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/EntityDatabase.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1595">
-          <caret line="60" column="35" lean-forward="false" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+        <state relative-caret-position="435">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <marker date="1508837660000" expanded="true" signature="7:134" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="164:199" ph="..." />
+            <marker date="1508837660000" expanded="true" signature="229:1107" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="304:349" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="400:1105" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="596:1042" ph="{...}" />
+            <marker date="1508837660000" expanded="true" signature="766:1028" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/api/QueryBuilder.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>

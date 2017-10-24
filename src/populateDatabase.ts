@@ -5,4 +5,4 @@ import { EntityDatabase } from "./database/EntityDatabase";
 let connection = new Connection(config);
 let entityDatabase = new EntityDatabase(connection);
 
-entityDatabase.populate("./codex.xlsx");
+entityDatabase.populate("../codex.xlsx");

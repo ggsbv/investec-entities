@@ -34,28 +34,45 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var _this = this;
-var waitFor = function (ms) { return new Promise(function (r) { return setTimeout(r, ms); }); };
-var start = function () { return __awaiter(_this, void 0, void 0, function () {
-    var _this = this;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, Promise.all([1, 2, 3].forEach(function (num) { return __awaiter(_this, void 0, void 0, function () {
-                    return __generator(this, function (_a) {
-                        switch (_a.label) {
-                            case 0: return [4 /*yield*/, waitFor(50)];
-                            case 1:
-                                _a.sent();
-                                console.log(num);
-                                return [2 /*return*/];
-                        }
-                    });
-                }); }))];
-            case 1:
-                _a.sent();
-                console.log("done");
-                return [2 /*return*/];
-        }
-    });
-}); };
-start();
+Object.defineProperty(exports, "__esModule", { value: true });
+var ExcelToJson_1 = require("../ExcelToJson");
+var EntityService_1 = require("./EntityService");
+var EntityDatabase = /** @class */ (function () {
+    function EntityDatabase(connection) {
+        var _this = this;
+        this.populate = function (excelSpreadsheetPath) {
+            var entityData = new ExcelToJson_1.ExcelToJson(excelSpreadsheetPath);
+            _this.connection.make()
+                .then(function (connection) { return __awaiter(_this, void 0, void 0, function () {
+                var entityService, relationship, _i, _a, parentEntity, childEntity;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0:
+                            entityService = EntityService_1.default(connection);
+                            _i = 0, _a = entityData.relationships();
+                            _b.label = 1;
+                        case 1:
+                            if (!(_i < _a.length)) return [3 /*break*/, 5];
+                            relationship = _a[_i];
+                            return [4 /*yield*/, entityService.getParentEntity(relationship)];
+                        case 2:
+                            parentEntity = _b.sent();
+                            return [4 /*yield*/, entityService
+                                    .getChildWithLimits(entityData.limits(), relationship, parentEntity)];
+                        case 3:
+                            childEntity = _b.sent();
+                            _b.label = 4;
+                        case 4:
+                            _i++;
+                            return [3 /*break*/, 1];
+                        case 5: return [2 /*return*/];
+                    }
+                });
+            }); })
+                .catch(function (error) { return console.log(error); });
+        };
+        this.connection = connection;
+    }
+    return EntityDatabase;
+}());
+exports.EntityDatabase = EntityDatabase;

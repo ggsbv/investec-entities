@@ -10,52 +10,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var typeorm_1 = require("typeorm");
-var ChildEntity_1 = require("./ChildEntity");
-var Limit = /** @class */ (function () {
-    function Limit() {
+var ParentEntity_1 = require("./ParentEntity");
+var Limits_1 = require("./Limits");
+var ChildEntity = /** @class */ (function () {
+    function ChildEntity() {
     }
     __decorate([
         typeorm_1.PrimaryGeneratedColumn(),
         __metadata("design:type", Number)
-    ], Limit.prototype, "id", void 0);
-    __decorate([
-        typeorm_1.Column("text"),
-        __metadata("design:type", String)
-    ], Limit.prototype, "riskTakerGroupName", void 0);
-    __decorate([
-        typeorm_1.Column("text"),
-        __metadata("design:type", String)
-    ], Limit.prototype, "riskTakerName", void 0);
+    ], ChildEntity.prototype, "id", void 0);
     __decorate([
         typeorm_1.Column("int"),
+        typeorm_1.Index({ unique: true }),
         __metadata("design:type", Number)
-    ], Limit.prototype, "facilityId", void 0);
+    ], ChildEntity.prototype, "entityId", void 0);
     __decorate([
         typeorm_1.Column("text"),
         __metadata("design:type", String)
-    ], Limit.prototype, "facilityType", void 0);
+    ], ChildEntity.prototype, "name", void 0);
     __decorate([
-        typeorm_1.Column("int"),
-        __metadata("design:type", Number)
-    ], Limit.prototype, "limitId", void 0);
-    __decorate([
-        typeorm_1.Column("text"),
-        __metadata("design:type", String)
-    ], Limit.prototype, "limitType", void 0);
-    __decorate([
-        typeorm_1.Column("text"),
-        __metadata("design:type", String)
-    ], Limit.prototype, "product", void 0);
-    __decorate([
-        typeorm_1.ManyToOne(function (type) { return ChildEntity_1.ChildEntity; }, function (childEntity) { return childEntity.limits; }, {
+        typeorm_1.ManyToOne(function (type) { return ParentEntity_1.ParentEntity; }, function (parentEntity) { return parentEntity.children; }, {
             cascadeInsert: true,
             cascadeUpdate: true // Allow to update an album on photo save
         }),
-        __metadata("design:type", ChildEntity_1.ChildEntity)
-    ], Limit.prototype, "entity", void 0);
-    Limit = __decorate([
+        __metadata("design:type", ParentEntity_1.ParentEntity)
+    ], ChildEntity.prototype, "parent", void 0);
+    __decorate([
+        typeorm_1.OneToMany(function (type) { return Limits_1.Limit; }, function (limit) { return limit.entity; }),
+        __metadata("design:type", Array)
+    ], ChildEntity.prototype, "limits", void 0);
+    ChildEntity = __decorate([
         typeorm_1.Entity()
-    ], Limit);
-    return Limit;
+    ], ChildEntity);
+    return ChildEntity;
 }());
-exports.Limit = Limit;
+exports.ChildEntity = ChildEntity;

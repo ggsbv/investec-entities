@@ -8,6 +8,7 @@ export class ChildEntity {
     id : number;
 
     @Column("int")
+    @Index({ unique: true })
     entityId : number;
 
     @Column("text")

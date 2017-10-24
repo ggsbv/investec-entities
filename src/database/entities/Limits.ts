@@ -31,6 +31,21 @@ export class Limit {
     @Column("text")
     product: string;
 
+    @Column("text")
+    riskType: string;
+
+    @Column("text")
+    currency: string;
+
+    @Column({ type: "float", precision: 13, scale: 2 })
+    exposureAmount: number;
+
+    @Column("varchar")
+    totalCurrentLimit: number;
+
+    @Column("varchar")
+    totalApprovedLimit: number;
+
     @ManyToOne(type => ChildEntity, childEntity => childEntity.limits, {
         cascadeInsert: true, // Allow to insert a new album on photo save
         cascadeUpdate: true // Allow to update an album on photo save

@@ -27,7 +27,12 @@ api.get("/api/entities/parents/:id", (req, res, next) => {
 });
 
 api.get("/api/entities/:id/limits", (req, res, next) => {
-    getRepository(ChildEntity).findOneById({ id: req.params.id }, { relations: ["limits"] })
+    getRepository(ChildEntity).findOne({
+        relations: ['limits'],
+        where: {
+            entityId: Number(req.params.id)
+        }
+    })
         .then((childEntity) => res.json(childEntity.limits))
         .catch((err) => next(err));
 });

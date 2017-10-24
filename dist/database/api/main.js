@@ -23,7 +23,12 @@ api.get("/api/entities/parents/:id", function (req, res, next) {
         .catch(function (err) { return next(err); });
 });
 api.get("/api/entities/:id/limits", function (req, res, next) {
-    typeorm_1.getRepository(ChildEntity_1.ChildEntity).findOneById({ id: req.params.id }, { relations: ["limits"] })
+    typeorm_1.getRepository(ChildEntity_1.ChildEntity).findOne({
+        relations: ['limits'],
+        where: {
+            entityId: Number(req.params.id)
+        }
+    })
         .then(function (childEntity) { return res.json(childEntity.limits); })
         .catch(function (err) { return next(err); });
 });
