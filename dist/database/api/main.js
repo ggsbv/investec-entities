@@ -6,19 +6,19 @@ var cors_1 = require("./cors");
 var errorHandler_1 = require("./errorHandler");
 var config_1 = require("../config");
 var typeorm_1 = require("typeorm");
-var ParentEntity_1 = require("../entities/ParentEntity");
+var BankingEntity_1 = require("../entities/BankingEntity");
 var ChildEntity_1 = require("../entities/ChildEntity");
 var api = express();
 api.use(body_parser_1.json());
 api.use(cors_1.default);
 typeorm_1.createConnection(config_1.default);
 api.get("/api/entities/parents", function (req, res, next) {
-    typeorm_1.getRepository(ParentEntity_1.ParentEntity).find()
+    typeorm_1.getRepository(BankingEntity_1.ParentEntity).find()
         .then(function (parentEntities) { return res.json(parentEntities); })
         .catch(function (err) { return next(err); });
 });
 api.get("/api/entities/parents/:id", function (req, res, next) {
-    typeorm_1.getRepository(ParentEntity_1.ParentEntity).findOneById({ id: req.params.id }, { relations: ["children"] })
+    typeorm_1.getRepository(BankingEntity_1.ParentEntity).findOneById({ id: req.params.id }, { relations: ["children"] })
         .then(function (parentEntity) { return res.json(parentEntity.children); })
         .catch(function (err) { return next(err); });
 });

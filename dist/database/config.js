@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var ParentEntity_1 = require("./entities/ParentEntity");
-var ChildEntity_1 = require("./entities/ChildEntity");
-var Limits_1 = require("./entities/Limits");
+var BankingEntity_1 = require("./entities/BankingEntity");
+var RelationshipType_1 = require("./entities/RelationshipType");
+var Parent_1 = require("./entities/Parent");
+var Child_1 = require("./entities/Child");
 var config = {
     type: "mysql",
     host: "localhost",
@@ -11,9 +12,10 @@ var config = {
     password: "",
     database: "investec_entities",
     entities: [
-        ParentEntity_1.ParentEntity,
-        ChildEntity_1.ChildEntity,
-        Limits_1.Limit
+        BankingEntity_1.BankingEntity,
+        RelationshipType_1.RelationshipType,
+        Parent_1.Parent,
+        Child_1.Child,
     ],
     synchronize: true
 };

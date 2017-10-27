@@ -1,5 +1,5 @@
 import { Entity, Index, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany } from "typeorm";
-import { ParentEntity } from "./ParentEntity";
+import { ParentEntity } from "./BankingEntity";
 import { Limit } from "./Limits";
 
 @Entity()

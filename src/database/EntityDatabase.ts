@@ -1,28 +1,30 @@
 import { Connection } from "./Connection";
 import { ExcelToJson } from "../ExcelToJson";
 
-import EntityService from './EntityService';
+import { BankingEntity } from "./entities/BankingEntity";
+import EntityService from "./EntityService";
 
 export class EntityDatabase {
-    protected connection: any;
+    protected connection: Connection;
+    protected entityData: ExcelToJson;
 
-    constructor(connection : Connection) {
+    constructor(connection : Connection, excelSpreadsheetPath: string) {
         this.connection = connection;
+        this.entityData = new ExcelToJson(excelSpreadsheetPath);
     }
 
-    populate = (excelSpreadsheetPath: string) => {
-        let entityData = new ExcelToJson(excelSpreadsheetPath);
-
+    addEntities = () => {
         this.connection.make()
             .then(async (connection: any) => {
-                let entityService = EntityService(connection);
                 let relationship: any;
+                let entityService = EntityService(connection);
 
-                for (relationship of entityData.relationships()) {
-                    let parentEntity = await entityService.getParentEntity(relationship);
+                for (relationship of this.entityData.relationships()) {
+                    await entityService
+                        .saveEntity(relationship["Parent Entity Id"], relationship["Parent Entity Name"]);
 
-                    let childEntity = await entityService
-                        .getChildWithLimits(entityData.limits(), relationship, parentEntity);
+                    await entityService
+                        .saveEntity(relationship["Entity Id"], relationship["Entity Name"]);
                 }
             })
             .catch((error: any) => console.log(error));

@@ -35,10 +35,32 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ParentEntity_1 = require("./entities/ParentEntity");
+var BankingEntity_1 = require("./entities/BankingEntity");
 var ChildEntity_1 = require("./entities/ChildEntity");
 var Limits_1 = require("./entities/Limits");
 var EntityService = function (connection) {
+    var _this = this;
+    var saveEntity = function (id, name) { return __awaiter(_this, void 0, void 0, function () {
+        var entity;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, connection.getRepository(BankingEntity_1.BankingEntity).findOne({
+                        entityId: id
+                    })];
+                case 1:
+                    entity = _a.sent();
+                    if (!!entity) return [3 /*break*/, 3];
+                    entity = new BankingEntity_1.BankingEntity();
+                    entity.entityId = id;
+                    entity.name = name;
+                    return [4 /*yield*/, connection.manager.save(entity)];
+                case 2:
+                    _a.sent();
+                    _a.label = 3;
+                case 3: return [2 /*return*/];
+            }
+        });
+    }); };
     var getLimits = function (limits, relationship, childEntity) {
         return __awaiter(this, void 0, void 0, function () {
             var limit, _i, limits_1, newLimit;
@@ -82,13 +104,13 @@ var EntityService = function (connection) {
             var parentEntity;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, connection.getRepository(ParentEntity_1.ParentEntity).findOne({
+                    case 0: return [4 /*yield*/, connection.getRepository(BankingEntity_1.ParentEntity).findOne({
                             entityId: Number(relationship['Parent Entity Id'])
                         })];
                     case 1:
                         parentEntity = _a.sent();
                         if (!parentEntity) {
-                            parentEntity = new ParentEntity_1.ParentEntity();
+                            parentEntity = new BankingEntity_1.ParentEntity();
                             parentEntity.name = relationship['Parent Entity Name'].trim();
                             parentEntity.entityId = Number(relationship['Parent Entity Id']);
                         }
@@ -128,7 +150,8 @@ var EntityService = function (connection) {
     };
     return {
         getParentEntity: getParentEntity,
-        getChildWithLimits: getChildWithLimits
+        getChildWithLimits: getChildWithLimits,
+        saveEntity: saveEntity
     };
 };
 exports.default = EntityService;

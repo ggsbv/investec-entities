@@ -10,7 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var typeorm_1 = require("typeorm");
-var ChildEntity_1 = require("./ChildEntity");
+var Parent_1 = require("./Parent");
+var Child_1 = require("./Child");
 var BankingEntity = /** @class */ (function () {
     function BankingEntity() {
     }
@@ -28,9 +29,13 @@ var BankingEntity = /** @class */ (function () {
         __metadata("design:type", String)
     ], BankingEntity.prototype, "name", void 0);
     __decorate([
-        typeorm_1.OneToMany(function (type) { return ChildEntity_1.ChildEntity; }, function (childEntity) { return childEntity.parent; }),
-        __metadata("design:type", Array)
-    ], BankingEntity.prototype, "children", void 0);
+        typeorm_1.OneToOne(function (type) { return Parent_1.Parent; }, function (parent) { return parent.entity; }),
+        __metadata("design:type", Parent_1.Parent)
+    ], BankingEntity.prototype, "parent", void 0);
+    __decorate([
+        typeorm_1.OneToOne(function (type) { return Child_1.Child; }, function (child) { return child.entity; }),
+        __metadata("design:type", Child_1.Child)
+    ], BankingEntity.prototype, "child", void 0);
     BankingEntity = __decorate([
         typeorm_1.Entity()
     ], BankingEntity);

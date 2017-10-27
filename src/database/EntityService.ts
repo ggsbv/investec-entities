@@ -1,8 +1,28 @@
-import { ParentEntity } from "./entities/ParentEntity";
+import { BankingEntity, ParentEntity } from "./entities/BankingEntity";
 import { ChildEntity } from "./entities/ChildEntity";
 import { Limit } from "./entities/Limits";
 
+interface EntityDetailsInterface {
+    id: number;
+    name: string,
+}
+
 const EntityService = function (connection: any) {
+    const saveEntity = async (id: number, name: string) => {
+        let entity: BankingEntity | undefined;
+
+        entity = await connection.getRepository(BankingEntity).findOne({
+            entityId: id
+        });
+
+        if (! entity) {
+            entity = new BankingEntity();
+            entity.entityId = id;
+            entity.name = name;
+
+            await connection.manager.save(entity);
+        }
+    };
 
     const getLimits = async function (limits: any, relationship:any, childEntity: ChildEntity) {
         let limit: any;
@@ -73,7 +93,8 @@ const EntityService = function (connection: any) {
 
     return {
         getParentEntity,
-        getChildWithLimits
+        getChildWithLimits,
+        saveEntity
     }
 };
 

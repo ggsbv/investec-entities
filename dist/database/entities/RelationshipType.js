@@ -10,30 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var typeorm_1 = require("typeorm");
-var ChildEntity_1 = require("./ChildEntity");
-var BankingEntity = /** @class */ (function () {
-    function BankingEntity() {
+var Parent_1 = require("./Parent");
+var RelationshipType = /** @class */ (function () {
+    function RelationshipType() {
     }
     __decorate([
         typeorm_1.PrimaryGeneratedColumn(),
         __metadata("design:type", Number)
-    ], BankingEntity.prototype, "id", void 0);
+    ], RelationshipType.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column("int"),
-        typeorm_1.Index({ unique: true }),
-        __metadata("design:type", Number)
-    ], BankingEntity.prototype, "entityId", void 0);
-    __decorate([
-        typeorm_1.Column("text"),
-        __metadata("design:type", String)
-    ], BankingEntity.prototype, "name", void 0);
-    __decorate([
-        typeorm_1.OneToMany(function (type) { return ChildEntity_1.ChildEntity; }, function (childEntity) { return childEntity.parent; }),
-        __metadata("design:type", Array)
-    ], BankingEntity.prototype, "children", void 0);
-    BankingEntity = __decorate([
+        typeorm_1.OneToOne(function (type) { return Parent_1.Parent; }, function (parent) { return parent.relationshipType; }),
+        __metadata("design:type", Parent_1.Parent)
+    ], RelationshipType.prototype, "parent", void 0);
+    RelationshipType = __decorate([
         typeorm_1.Entity()
-    ], BankingEntity);
-    return BankingEntity;
+    ], RelationshipType);
+    return RelationshipType;
 }());
-exports.BankingEntity = BankingEntity;
+exports.RelationshipType = RelationshipType;

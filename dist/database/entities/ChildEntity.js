@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var typeorm_1 = require("typeorm");
-var ParentEntity_1 = require("./ParentEntity");
+var BankingEntity_1 = require("./BankingEntity");
 var Limits_1 = require("./Limits");
 var ChildEntity = /** @class */ (function () {
     function ChildEntity() {
@@ -29,11 +29,11 @@ var ChildEntity = /** @class */ (function () {
         __metadata("design:type", String)
     ], ChildEntity.prototype, "name", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function (type) { return ParentEntity_1.ParentEntity; }, function (parentEntity) { return parentEntity.children; }, {
+        typeorm_1.ManyToOne(function (type) { return BankingEntity_1.ParentEntity; }, function (parentEntity) { return parentEntity.children; }, {
             cascadeInsert: true,
             cascadeUpdate: true // Allow to update an album on photo save
         }),
-        __metadata("design:type", ParentEntity_1.ParentEntity)
+        __metadata("design:type", typeof (_a = typeof BankingEntity_1.ParentEntity !== "undefined" && BankingEntity_1.ParentEntity) === "function" && _a || Object)
     ], ChildEntity.prototype, "parent", void 0);
     __decorate([
         typeorm_1.OneToMany(function (type) { return Limits_1.Limit; }, function (limit) { return limit.entity; }),
@@ -43,5 +43,6 @@ var ChildEntity = /** @class */ (function () {
         typeorm_1.Entity()
     ], ChildEntity);
     return ChildEntity;
+    var _a;
 }());
 exports.ChildEntity = ChildEntity;

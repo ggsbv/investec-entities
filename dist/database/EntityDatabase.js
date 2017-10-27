@@ -38,29 +38,29 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ExcelToJson_1 = require("../ExcelToJson");
 var EntityService_1 = require("./EntityService");
 var EntityDatabase = /** @class */ (function () {
-    function EntityDatabase(connection) {
+    function EntityDatabase(connection, excelSpreadsheetPath) {
         var _this = this;
-        this.populate = function (excelSpreadsheetPath) {
-            var entityData = new ExcelToJson_1.ExcelToJson(excelSpreadsheetPath);
+        this.addEntities = function () {
             _this.connection.make()
                 .then(function (connection) { return __awaiter(_this, void 0, void 0, function () {
-                var entityService, relationship, _i, _a, parentEntity, childEntity;
+                var relationship, entityService, _i, _a;
                 return __generator(this, function (_b) {
                     switch (_b.label) {
                         case 0:
                             entityService = EntityService_1.default(connection);
-                            _i = 0, _a = entityData.relationships();
+                            _i = 0, _a = this.entityData.relationships();
                             _b.label = 1;
                         case 1:
                             if (!(_i < _a.length)) return [3 /*break*/, 5];
                             relationship = _a[_i];
-                            return [4 /*yield*/, entityService.getParentEntity(relationship)];
-                        case 2:
-                            parentEntity = _b.sent();
                             return [4 /*yield*/, entityService
-                                    .getChildWithLimits(entityData.limits(), relationship, parentEntity)];
+                                    .saveEntity(relationship["Parent Entity Id"], relationship["Parent Entity Name"])];
+                        case 2:
+                            _b.sent();
+                            return [4 /*yield*/, entityService
+                                    .saveEntity(relationship["Entity Id"], relationship["Entity Name"])];
                         case 3:
-                            childEntity = _b.sent();
+                            _b.sent();
                             _b.label = 4;
                         case 4:
                             _i++;
@@ -72,6 +72,7 @@ var EntityDatabase = /** @class */ (function () {
                 .catch(function (error) { return console.log(error); });
         };
         this.connection = connection;
+        this.entityData = new ExcelToJson_1.ExcelToJson(excelSpreadsheetPath);
     }
     return EntityDatabase;
 }());

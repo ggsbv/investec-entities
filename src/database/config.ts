@@ -1,6 +1,9 @@
-import { ParentEntity } from "./entities/ParentEntity";
-import { ChildEntity } from "./entities/ChildEntity";
 import { MysqlConnectionOptions } from "typeorm/driver/mysql/MysqlConnectionOptions";
+
+import { BankingEntity } from "./entities/BankingEntity";
+import { RelationshipType } from "./entities/RelationshipType";
+import { Parent } from "./entities/Parent";
+import { Child } from "./entities/Child";
 import { Limit } from "./entities/Limits";
 
 let config : MysqlConnectionOptions = {
@@ -11,9 +14,11 @@ let config : MysqlConnectionOptions = {
     password: "",
     database: "investec_entities",
     entities: [
-        ParentEntity,
-        ChildEntity,
-        Limit
+        BankingEntity,
+        RelationshipType,
+        Parent,
+        Child,
+        // Limit
     ],
     synchronize: true
 };

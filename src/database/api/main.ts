@@ -4,7 +4,7 @@ import cors from "./cors";
 import errorHandler from "./errorHandler";
 import config from "../config";
 import { createConnection, getRepository } from "typeorm";
-import { ParentEntity } from "../entities/ParentEntity";
+import { ParentEntity } from "../entities/BankingEntity";
 import { ChildEntity } from "../entities/ChildEntity";
 
 const api = express();
